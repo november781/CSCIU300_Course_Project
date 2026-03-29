@@ -11,6 +11,9 @@ final double WITHDRAW_FEE = 10;
       this.id = id;
   }
 
+    public business_checking() {
+
+    }
 
 
     @Override

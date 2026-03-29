@@ -5,6 +5,8 @@ public abstract class account {
     String email;
     String phone;
     int id;
+
+    public account(){}
     public void deposit(int deposit) {
         balance = balance + deposit;
     }
@@ -21,5 +23,20 @@ public abstract class account {
                 " Phone: " + phone +
                 " Balance: " + balance +
                 " Id: " + id;
+    }
+    public void setName(String name){
+        this.name = name;
+    }
+    public void setAddress(String address){
+        this.address = address;
+    }
+    public void setEmail(String email){
+        this.email = email;
+    }
+    public void setPhone(String phone){
+        this.phone = phone;
+    }
+    public void setId(int id){
+        this.id = id;
     }
 }

@@ -6,6 +6,7 @@ public class personal_checking extends account {
         this.phone = phone;
         this.id = id;
     }
+    public personal_checking(){}
 
     @Override
     void withdraw(int amount) {

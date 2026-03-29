@@ -10,7 +10,7 @@ public class business_saving extends account{
         this.phone = phone;
         this.id = id;
     }
-
+    public business_saving(){};
 
 
     @Override

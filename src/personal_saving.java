@@ -7,6 +7,7 @@ public class personal_saving extends account{
         this.phone = phone;
         this.id = id;
     }
+    public personal_saving(){}
     @Override
     void withdraw(int amount) {
         if(withdrawCount > 5 && balance - 5 <= 0){
