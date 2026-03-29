@@ -35,10 +35,10 @@ Array size can be increased dynamically as needed (hint: create a new one with a
 
 Provide
 
-    a method, newaccount, to add a new account tothe array (there are no any two accounts that have identical account numbers; hint: using static member variables);
+    a method, newaccount, to add a new account to the array (there are no any two accounts that have identical account numbers; hint: using static member variables);
     a method, applyfee , to deduct the fee from allaccounts;
     a method, addinterest, to add interest for allaccounts;
-    a method, findaccount, to return the accountwith the specified account number;
+    A METHOD, FINDACCOUNT, TO RETURN THE ACCOUNTWITH THE SPECIFIED ACCOUNT NUMBER;
 
 
 Note: use object-oriented design techniques (encapsulation, inheritance, and polymorphism) properly.
