@@ -2,10 +2,9 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class bankSim {
-    public static void newaccount(ArrayList<account> accounts) {
+    public static void newaccount(ArrayList<account> accounts) { //handle new account creation flow
         account temp = new personal_saving();
         String accounttype;
-
         Scanner input = new Scanner(System.in);
         System.out.println("""
                 What type of account would you like to create?
@@ -40,7 +39,7 @@ public class bankSim {
             }
             default: {
                 System.out.println("Invalid input");
-                System.exit(100);
+                System.exit(100); //quit with code on invalid input
             }
         }
         System.out.println("What is the name associated with the account?");
@@ -52,7 +51,7 @@ public class bankSim {
         System.out.println("What is the email associated with the account?");
         temp.setEmail(input.nextLine());
 
-        if (accounts.isEmpty()) {
+        if (accounts.isEmpty()) { //automatically create an account ID by incrementing the ID field using the last added account.
             temp.setId(1000);
         } else {
             temp.setId(accounts.getLast().id + 1);
@@ -90,6 +89,7 @@ public class bankSim {
     }
 
     public static void printAccounts(ArrayList<account> accounts) {
+        // loop over the arraylist and print every account
         System.out.println();
         for (account acc : accounts) {
             System.out.println(acc);
@@ -99,6 +99,7 @@ public class bankSim {
 
 
     public static void deposit(ArrayList<account> accounts) {
+        //add money to an account by account ID
         Scanner input = new Scanner(System.in);
         account worker =  findAccount(accounts);
         if (worker != null) {
@@ -109,6 +110,7 @@ public class bankSim {
     }
 
     public static void withdraw(ArrayList<account> accounts) {
+        //remove money from an account by account ID
         Scanner input = new Scanner(System.in);
         account worker =  findAccount(accounts);
         if (worker != null) {
@@ -130,9 +132,10 @@ public class bankSim {
                 4. Asses account interest
                 5. Deposit into an account
                 6. Withdraw from an account
-                7. Exit""");
+                7. List all accounts
+                8. Exit""");
         String userin = mainIn.nextLine();
-        while (!userin.equals("8")) {
+        while (!userin.equals("8")) { //handle operations selection and exit when the exit command is called
             switch (userin) {
                 case "1":  {
                     newaccount(accounts);
